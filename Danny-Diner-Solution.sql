@@ -164,7 +164,8 @@ left join menu mn
 on s.product_id=mn.product_id;
 
 -- Bonus Question 2: Rank All The Things
-With CTE AS (SELECT 
+With CTE AS (
+    SELECT 
     s.customer_id,
     s.order_date,
     mn.product_name,
@@ -177,7 +178,8 @@ FROM sales s
 left join members m
 on s.customer_id=m.customer_id
 left join menu mn
-on s.product_id=mn.product_id)
+on s.product_id=mn.product_id
+)
 
 SELECT
     *,
